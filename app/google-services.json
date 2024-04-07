@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "108886999104",
+    "project_id": "capsules-me",
+    "storage_bucket": "capsules-me.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108886999104:android:1dca436266b88fcbaa5fa5",
+        "android_client_info": {
+          "package_name": "com.example.capsules"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeVynmRF_yj8EE2wST036b4wAsFs8w1g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

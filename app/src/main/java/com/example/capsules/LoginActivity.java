@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.AnimationUtils;
 
 import com.example.capsules.databinding.ActivityLoginBinding;
 
@@ -15,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
 
         binding.toSignupPage.setOnClickListener(v ->
                 startActivity(new Intent(LoginActivity.this, SignupActivity.class))

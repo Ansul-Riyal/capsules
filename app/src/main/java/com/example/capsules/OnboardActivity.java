@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 
 import com.example.capsules.databinding.ActivityOnboardBinding;
 
@@ -18,6 +19,7 @@ public class OnboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityOnboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         binding.btnGetStartedOnBoard.setOnClickListener(v ->
                 startActivity(new Intent(OnboardActivity.this, SignupActivity.class))

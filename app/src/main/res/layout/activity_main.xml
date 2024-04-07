@@ -15,6 +15,7 @@
         android:src="@drawable/icblur"/>
 
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -73,10 +74,34 @@
                        android:textColor="#80FFFFFF"/>
                </LinearLayout>
 
-               <androidx.recyclerview.widget.RecyclerView
+               <ScrollView
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:layout_marginTop="25dp"/>
+                   android:layout_marginTop="25dp"
+                   android:paddingHorizontal="27dp"
+                   android:clipToPadding="false"
+                   android:clipChildren="false">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/userstory"/>
+
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           tools:listitem="@layout/item_capsules"
+                           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                           android:orientation="horizontal"
+                           />
+                   </LinearLayout>
+               </ScrollView>
 
                <TextView
                    android:layout_width="match_parent"
@@ -91,12 +116,24 @@
 
                <androidx.recyclerview.widget.RecyclerView
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"/>
+                   android:layout_height="wrap_content"
+                   tools:listitem="@layout/itemchats"
+                   android:layout_marginHorizontal="27dp"
+                   />
            </LinearLayout>
 
 
         </ScrollView>
+
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_buttomblur"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"/>
+
 
 
     <RelativeLayout
@@ -117,20 +154,22 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/house_blank"
-                />
+                android:src="@drawable/house_blank"/>
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/user"
-                app:tint="#80FFFFFF" />
+                app:tint="#80FFFFFF"/>
+
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/toMapbtn"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
