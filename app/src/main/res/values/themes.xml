@@ -6,6 +6,7 @@
 
     <style name="Theme.Capsules" parent="Base.Theme.Capsules">
         <item name="android:statusBarColor">#1e1e1e</item>
+        <item name="android:windowBackground">@drawable/bg_main</item>
     </style>
     <style name="CustomButton" parent="Widget.AppCompat.Button">
         <item name="android:fontFamily">sans-serif</item>

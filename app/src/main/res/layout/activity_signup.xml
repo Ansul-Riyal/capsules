@@ -69,6 +69,7 @@
                     android:textColor="#80FFFFFF"/>
 
                 <EditText
+                    android:id="@+id/etUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
@@ -81,6 +82,7 @@
                     android:background="@drawable/bg_textbox"/>
 
                 <EditText
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -93,6 +95,7 @@
                     android:background="@drawable/bg_textbox"/>
 
                 <EditText
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -103,15 +106,6 @@
                     android:inputType="textPassword"
                     android:textColorHint="#80FFFFFF"
                     android:background="@drawable/bg_textbox"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Having Trouble?"
-                    android:textColor="#61A3FC"
-                    android:textSize="15dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="15dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSignup"
@@ -130,6 +124,7 @@
                     android:layout_marginVertical="10dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGoogleLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/CustomButton.Filled"

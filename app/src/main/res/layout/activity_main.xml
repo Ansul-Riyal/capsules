@@ -15,115 +15,29 @@
         android:src="@drawable/icblur"/>
 
     <LinearLayout
-        android:id="@+id/main"
+        android:id="@+id/tabHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingVertical="35dp"
-            android:paddingHorizontal="27dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Hi 👋\nUser"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:fontFamily="sans-serif"
-                android:textFontWeight="800"
-                android:textSize="35dp"/>
-            
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/bell"
-                android:background="@drawable/ig_bellback"
-                android:padding="10dp"/>
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <include layout="@layout/tab_home"/>
+
         </LinearLayout>
 
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/tabProfile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:background="@drawable/ig_bellback"
-                   android:gravity="center_vertical"
-                   android:paddingVertical="13dp"
-                   android:paddingHorizontal="18dp"
-                   android:layout_marginHorizontal="27dp">
-                   <ImageView
-                       android:layout_width="18dp"
-                       android:layout_height="18dp"
-                       android:src="@drawable/search" />
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:text="Search nearby capsules"
-                       android:layout_marginStart="10dp"
-                       android:textColor="#80FFFFFF"/>
-               </LinearLayout>
+            <include layout="@layout/tab_profile"/>
 
-               <ScrollView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="25dp"
-                   android:paddingHorizontal="27dp"
-                   android:clipToPadding="false"
-                   android:clipChildren="false">
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:gravity="center_vertical"
-                       android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginEnd="20dp"
-                            android:src="@drawable/userstory"/>
-
-                       <androidx.recyclerview.widget.RecyclerView
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           tools:listitem="@layout/item_capsules"
-                           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                           android:orientation="horizontal"
-                           />
-                   </LinearLayout>
-               </ScrollView>
-
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:text="Chats"
-                   android:fontFamily="sans-serif"
-                   android:textFontWeight="800"
-                   android:textSize="18dp"
-                   android:layout_marginHorizontal="27dp"
-                   android:textColor="@color/white"
-                   android:layout_marginVertical="20dp"/>
-
-               <androidx.recyclerview.widget.RecyclerView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   tools:listitem="@layout/itemchats"
-                   android:layout_marginHorizontal="27dp"
-                   />
-           </LinearLayout>
-
-
-        </ScrollView>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -133,8 +47,6 @@
         android:src="@drawable/ic_buttomblur"
         android:layout_alignParentBottom="true"
         android:scaleType="centerCrop"/>
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"

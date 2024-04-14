@@ -21,15 +21,15 @@ public class OnboardActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        binding.btnGetStartedOnBoard.setOnClickListener(v ->
-                startActivity(new Intent(OnboardActivity.this, SignupActivity.class))
+        binding.btnGetStartedOnBoard.setOnClickListener(v -> {
+                    startActivity(new Intent(OnboardActivity.this, SignupActivity.class));
+                    finish();
+                }
         );
-        binding.toLoginPage.setOnClickListener(v ->
-                startActivity(new Intent(OnboardActivity.this, LoginActivity.class))
+        binding.toLoginPage.setOnClickListener(v -> {
+                    startActivity(new Intent(OnboardActivity.this, LoginActivity.class));
+                    finish();
+                }
         );
-    }
-
-    public void closeScreen() {
-        finish();
     }
 }
